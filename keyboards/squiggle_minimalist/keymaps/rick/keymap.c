@@ -28,8 +28,6 @@ enum combos {
     J_K,
     Q_K,
     K_X,
-    U_J,
-    U_DOT,
 
     // right hand combinations.
     L_R,
@@ -41,8 +39,6 @@ enum combos {
     W_M,
     V_M,
     M_B,
-    H_W,
-    H_C,
 
     // both hands combinations.
     J_W,
@@ -110,8 +106,6 @@ const uint16_t PROGMEM q_j_combo[]         = {KC_Q, KC_J, COMBO_END};
 const uint16_t PROGMEM j_k_combo[]         = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM q_k_combo[]         = {KC_Q, KC_K, COMBO_END};
 const uint16_t PROGMEM k_x_combo[]         = {KC_K, KC_X, COMBO_END};
-const uint16_t PROGMEM u_j_combo[]         = {KC_U, KC_J, COMBO_END};
-const uint16_t PROGMEM u_dot_combo[]       = {KC_U, KC_DOT, COMBO_END};
 
 // right hand combinations.
 const uint16_t PROGMEM l_r_combo[]         = {KC_L, KC_R, COMBO_END};
@@ -123,8 +117,6 @@ const uint16_t PROGMEM v_w_combo[]         = {KC_V, KC_W, COMBO_END};
 const uint16_t PROGMEM w_m_combo[]         = {KC_W, KC_M, COMBO_END};
 const uint16_t PROGMEM v_m_combo[]         = {KC_V, KC_M, COMBO_END};
 const uint16_t PROGMEM m_b_combo[]         = {KC_M, KC_B, COMBO_END};
-const uint16_t PROGMEM h_w_combo[]         = {KC_H, KC_W, COMBO_END};
-const uint16_t PROGMEM h_c_combo[]         = {KC_H, KC_C, COMBO_END};
 
 // both hand combinations.
 const uint16_t PROGMEM j_w_combo[]         = {KC_J, KC_W, COMBO_END};
@@ -141,8 +133,6 @@ combo_t key_combos[COMBO_COUNT] = {
     [J_K]           = COMBO(j_k_combo,          KC_DELT),
     [Q_K]           = COMBO(q_k_combo,          KC_TAB),
     [K_X]           = COMBO(k_x_combo,          KC_TILD),
-    [U_J]           = COMBO(u_j_combo,          KC_PGDN),
-    [U_DOT]         = COMBO(u_dot_combo,        KC_PGUP),
 
     // right hand combinations.
     [L_R]           = COMBO(l_r_combo,          KC_BSPC),
@@ -154,8 +144,6 @@ combo_t key_combos[COMBO_COUNT] = {
     [W_M]           = COMBO(w_m_combo,          KC_DELT),
     [V_M]           = COMBO(v_m_combo,          LSFT(KC_TAB)),
     [M_B]           = COMBO(m_b_combo,          KC_GRV),
-    [H_W]           = COMBO(h_w_combo,          KC_END),
-    [H_C]           = COMBO(h_c_combo,          KC_HOME),
 
     // both hand combinations.
     [J_W]           = COMBO(j_w_combo,          KC_ENT),
