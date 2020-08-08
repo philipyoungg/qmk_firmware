@@ -172,13 +172,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] = LAYOUT(
     _______,EXPLR,  KC_UP,  PRVTAB, PRVWIN,     NXTWIN, NXTTAB, _______,_______,LCKGUI,
     TSKMGR, KC_LEFT,KC_DOWN,KC_RGHT,UPTAB,      DNTAB,  KC_ENT, KC_LGUI,_______,CALDL,
-    _______,CLSGUI, _______,CONPST, RESET,      _______,_______,_______,_______,_______,
+    _______,CLSGUI, KC_LEAD,CONPST, RESET,      _______,_______,_______,_______,_______,
                             _______,_______,    _______,_______
 ),
 };
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-#ifdef CONSOLE_ENABLE
-    uprintf("KL: kc: %u, col: %u, row: %u, pressed: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed);
-#endif
-    return true;
+
+LEADER_EXTERNS();
+
+void matrix_scan_user(void) {
+  LEADER_DICTIONARY() {
+    leading = false;
+    leader_end();
+    SEQ_ONE_KEY(KC_U) {
+      SEND_STRING("test");
+    }
+  }
 }
