@@ -35,6 +35,7 @@ enum combos {
     C_G,
     R_G,
     G_F,
+    Z_V,
     V_W,
     W_M,
     V_M,
@@ -113,6 +114,7 @@ const uint16_t PROGMEM r_c_combo[]         = {KC_R, KC_C, COMBO_END};
 const uint16_t PROGMEM c_g_combo[]         = {KC_C, KC_G, COMBO_END};
 const uint16_t PROGMEM r_g_combo[]         = {KC_R, KC_G, COMBO_END};
 const uint16_t PROGMEM g_f_combo[]         = {KC_G, KC_F, COMBO_END};
+const uint16_t PROGMEM z_v_combo[]         = {KC_Z, KC_V, COMBO_END};
 const uint16_t PROGMEM v_w_combo[]         = {KC_V, KC_W, COMBO_END};
 const uint16_t PROGMEM w_m_combo[]         = {KC_W, KC_M, COMBO_END};
 const uint16_t PROGMEM v_m_combo[]         = {KC_V, KC_M, COMBO_END};
@@ -140,6 +142,7 @@ combo_t key_combos[COMBO_COUNT] = {
     [C_G]           = COMBO(c_g_combo,          KC_MINS),
     [R_G]           = COMBO(r_g_combo,          NXTTAB),
     [G_F]           = COMBO(g_f_combo,          KC_BSLS),
+    [Z_V]           = COMBO(z_v_combo,          KC_ESC),
     [V_W]           = COMBO(v_w_combo,          KC_APP),
     [W_M]           = COMBO(w_m_combo,          KC_DELT),
     [V_M]           = COMBO(v_m_combo,          LSFT(KC_TAB)),
