@@ -186,7 +186,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 [_LOWER] = LAYOUT(
     KC_TILDE, KC_WH_D,KC_WH_U,    KC_WH_D,  KC_CLCK,                  KC_BSPC,    KC_WH_U,    KC_UP,  KC_PGDN,    KC_BSPC,
-    S(KC_TAB),  LSFT_T(KC_TAB), KC_LALT,LGUI_T(KC_BTN2),  KC_BTN1,    KC_LEFT,     KC_DOWN,    KC_UP,KC_RIGHT,   KC_CLCK,
+    S(KC_TAB),  LSFT_T(KC_TAB), KC_LALT,KC_BTN1,  KC_BTN2,    KC_LEFT,     KC_DOWN,    KC_UP,KC_RIGHT,   KC_CLCK,
     KC_CLCK,         G(KC_X),G(KC_C),G(KC_V),G(KC_Z),        KC_MS_L,  KC_MS_D,    KC_MS_U,    KC_MS_R, _______,
                             ADDDD,  _______,    ALT_ENT,LT(_ADJUST, KC_SPC)
 ),
