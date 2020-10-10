@@ -85,8 +85,8 @@ enum {
 #define GU_H    RGUI_T(KC_H)
 
 // layer toggle.
-#define LW_BSPC  LT(_LOWER, KC_BSPC)
-#define RS_SPC   LT(_SYMBOL, KC_SPC)
+#define LW_BSPC  LT(_SYMBOL, KC_BSPC)
+#define RS_SPC   LT(_LOWER, KC_SPC)
 #define ADDDD    LT(_ADJUST, KC_BSPC)
 
 // idk, man. not used, i guess.

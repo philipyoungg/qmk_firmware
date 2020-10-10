@@ -134,14 +134,13 @@ const uint16_t PROGMEM g_h_combo[]           = {KC_G, KC_H,    COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     // left hand combinations.
-    [Q_W]           = COMBO(q_w_combo, KC_TILDE),
+    [Q_W]           = COMBO(q_w_combo, KC_TAB),
     [W_E]           = COMBO(w_e_combo, KC_DQT),
     [E_R]           = COMBO(e_r_combo, KC_UNDS),
     [W_R]           = COMBO(w_r_combo, KC_EQL),
     [Z_X]           = COMBO(z_x_combo, KC_ENT),
     [C_X]           = COMBO(x_c_combo, LCTL(KC_W)),
     [C_V]           = COMBO(c_v_combo, KC_DELT),
-
     // right hand combinations.
     [P_O]           = COMBO(p_o_combo,       KC_BSPC),
     [O_U]           = COMBO(o_u_combo,       KC_EQL),
@@ -186,16 +185,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             LW_BSPC,SFT_ESC,    ALT_ENT,RS_SPC
 ),
 [_LOWER] = LAYOUT(
-    LGUI(KC_GRAVE), KC_QUES,KC_WH_U,    KC_WH_D,  KC_CLCK,                  KC_BSPC,    KC_WH_U,    KC_UP,  KC_PGDN,    KC_BSPC,
-    LCTL_T(KC_ESC),  LSFT_T(KC_TAB), KC_LALT,LGUI_T(KC_BTN1),  LCTL_T(KC_BTN2),    KC_LEFT,     KC_DOWN,    KC_UP,KC_RIGHT,   KC_CLCK,
+    KC_TILDE, KC_WH_D,KC_WH_U,    KC_WH_D,  KC_CLCK,                  KC_BSPC,    KC_WH_U,    KC_UP,  KC_PGDN,    KC_BSPC,
+    S(KC_TAB),  LSFT_T(KC_TAB), KC_LALT,LGUI_T(KC_BTN2),  KC_BTN1,    KC_LEFT,     KC_DOWN,    KC_UP,KC_RIGHT,   KC_CLCK,
     KC_CLCK,         G(KC_X),G(KC_C),G(KC_V),G(KC_Z),        KC_MS_L,  KC_MS_D,    KC_MS_U,    KC_MS_R, _______,
                             ADDDD,  _______,    ALT_ENT,LT(_ADJUST, KC_SPC)
 ),
 [_RAISE] = LAYOUT(
     KC_EXLM,    KC_AT,  KC_HASH,    KC_DOLLAR,KC_PERCENT,    KC_BSLS,KC_7,   KC_8,   KC_9,   KC_ASTR,
-    KC_LT,  LSFT_T(KC_LBRC),    KC_LPRN,KC_LCBR,  KC_AMPR,     KC_EQL, KC_4,   KC_5,   KC_6,   KC_MINS,
-    KC_GT ,KC_LBRC,KC_RBRC,KC_LPRN,KC_RPRN,    KC_GRV, KC_1,   KC_2,   KC_3,   KC_PLUS,
-                            ADDDD,  _______,    KC_0,LT(_ADJUST, KC_BSPC)
+    KC_LT,  SFT_T(KC_LBRC),    KC_LPRN, KC_LCBR,  KC_AMPR,     KC_EQL, KC_4,   KC_5,   KC_6,   KC_MINS,
+KC_GT ,KC_LBRC,KC_RPRN,KC_RCBR,    KC_GRV, KC_PIPE, KC_1,   KC_2,   KC_3,   KC_PLUS,
+                            ADDDD,  _______,    KC_BSPC,LT(_ADJUST, KC_0)
 ),
 [_ADJUST] = LAYOUT(
     KC_F1,KC_F2,  KC_F3,  KC_F4, KC_F5,     KC_F6, KC_F7, KC_F8,KC_F9,KC_F10,
@@ -204,14 +203,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             _______,_______,    _______,_______
 ),
 };
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef CONSOLE_ENABLE
       uprintf("KL: kc: %u, col: %u, row: %u, pressed: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed);
 #endif
     return true;
 }
-
-
-
-
